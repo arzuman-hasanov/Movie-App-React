@@ -1,37 +1,38 @@
-.main-page__content {
-    padding: 42px calc(50% - 500px);
+  .mainPageContent {
     display: flex;
+    padding: 42px calc(50% - 500px);
     justify-content: space-between;
   }
   
-  .main-page__main-section {
+  .mainPageMainSection {
+    width: 60%;
     padding-left: 40px;
     box-sizing: border-box;
-    width: 60%;
   }
   
-  .main-page__search-box {
-    margin-bottom: 35px;
-  }
-  
-  .main-page__favorites {
+  .mainPageFavorites {
     width: 35%;
   }
   
+  .mainPageSearchBox {
+    margin-bottom: 35px;
+  }
+  
+  
   @media screen and (min-width: 320px) and (max-width: 991px) {
-    .main-page {
+    .mainPage {
       padding: 0;
       width: 100%;
     }
-    .main-page__content {
+    .mainPageContent {
       padding: 20px;
       flex-direction: column-reverse;
       margin-left: 2%;
     }
-    .main-page__favorites {
+    .mainPageFavorites {
       width: 50%;
     }
-    .main-page__main-section {
+    .mainPageMainSection {
       margin: 30px 0;
       padding: 0;
       width: 90%;

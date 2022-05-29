@@ -26,36 +26,36 @@ function Favorites(props) {
   };
   const saveListHandler = () => {
     if(!state.title.length){
-      setState({ disabled: true })
+      setState(prev=>({...prev, disabled: true }));
     }else {
-      setState({ isSbm: true });
+      setState(prev=>({...prev, isSbm: true }));
       props.postList(state.title, getImdbIDArray());
     }
   };
   const { title, isSbm } = state;
   return (
-    <div className="favorites">
+    <div className="fav-container">
       <input
         value={title}
-        className="favorites__name"
+        className="fav_name"
         onChange={favoriteChange}
         disabled={state.isSbm}
       />
-      <ul className="favorites__list">
+      <ul className="fav_list">
         {props.favoriteList.map((item) => {
           return (
             <li key={item.imdbID}>
               <div className="block">
-                <button
-                  title="Remove"
-                  className="remove-favorite-movie"
-                  onClick={() => props.removeMovieFromFavoriteList(item.imdbID)}
-                >
-                  🗑️
-                </button>
                 <p className="movie-name">
                   {item.Title} ({item.Year})
                 </p>
+                <button
+                  title="Remove"
+                  className="remove-fav-movie"
+                  onClick={() => props.removeMovieFromFavoriteList(item.imdbID)}
+                >
+                  ✖
+                </button>
               </div>
             </li>
           );
@@ -65,14 +65,14 @@ function Favorites(props) {
       {!isSbm ? (
         <button
           type="button"
-          className="favorites__save"
+          className="fav_save"
           onClick={saveListHandler}
           
         >
           Save List
         </button>
       ) : (
-        <button type="button" className="favorites__save">
+        <button type="button" className="fav_save">
           <Link
             to={"/list/" + props.listID}
             target="_blank"

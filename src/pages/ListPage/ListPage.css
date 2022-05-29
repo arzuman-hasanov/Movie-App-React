@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-.info {
+.movie-info {
   color: #fff;
 }
 
@@ -9,13 +9,13 @@
   text-decoration: none;
 }
 
-.movie-item__add-button {
+.movieItemAddButton {
   background-color: #0d7e5c;
   min-width: 150px;
   border-radius: 5px;
 }
 
-.list-page__title {
+.listp-title {
   font-size: 34px;
   margin: 26px 0;
   text-align: center;
@@ -35,7 +35,7 @@
   border-radius: 15px;
 }
 
-.list-page__single-movie {
+.list-page-movie {
   position: relative;
   font-size: 18px;
   margin-bottom: 30px;
@@ -44,7 +44,8 @@
   padding: 20px;
 }
 
-.list-page__single-movie img {
+.list-page-movie img {
+  max-width: 208px;
   position: absolute;
   right: 0;
   top: 0;
@@ -53,13 +54,14 @@
   height: 309px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  object-fit:cover;
 }
 
-.single-movie__poster {
+.movie-img {
   margin-right: 32px;
 }
 
-.list-page__link-imdb {
+.listp-link-imdb {
   padding: 5px;
   text-decoration: none;
   color: white;
@@ -70,23 +72,23 @@
   display: block;
 }
 
-.list-page__details {
+.details {
   display: flex;
   padding: 10px 0;
   width: 300px;
 }
 
-.list-page__details-title {
+.details-title {
   width: 160px;
   font-size: 13px;
   
 }
 
-.movie-item__about {
+.movie-about {
   padding: 10px 0;
 }
 
-.list-page__details-value {
+.details-value {
   font-size: 13px;
   width: 100%;
 }
@@ -96,13 +98,13 @@
   color: white;
 }
 
-.movie-item__info-list {
+.info-list {
   display: flex;
   list-style-type: none;
   padding: 10px 0 0 0;
 }
 
-#movie-item__info-item {
+#info-item {
   padding: 0;
 }
 

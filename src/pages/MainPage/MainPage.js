@@ -7,18 +7,18 @@ import Favorites from '../../components/Favorites/Favorites';
 
 function MainPage() {
         return (
-            <div className="main-page">
+            <div className="mainPage">
                 <Header />
-                <main className="main-page__content">
-                    <section className="main-page__main-section">
-                        <div className="main-page__search-box">
+                <main className="mainPageContent">
+                    <section className="mainPageMainSection">
+                        <div className="mainPageSearchBox">
                             <SearchBox />
                         </div>
-                        <div className="main-page__movies">
+                        <div className="mainPageMovies">
                             <Movies />
                         </div>
                     </section>
-                    <aside className="main-page__favorites">
+                    <aside className="mainPageFavorites">
                         <Favorites />
                     </aside>
                 </main>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import "./ListPage.css";
 import { connect } from "react-redux";
 import { getList, getMovieInfoByImdbID } from "../../state/actions/dataActions";
@@ -7,12 +7,6 @@ import { Link } from "react-router-dom";
 
 function ListPage(props) {
  
-
-  const [state, setState] = useState({
-    isClicked: false
-  })
-
-
   useEffect(()=>{
     const id = props.match.params.id
     console.log(id)
@@ -25,41 +19,41 @@ function ListPage(props) {
         <Link className="Link" to="/">
           <Header />
         </Link>
-        <h1 className="list-page__title">{props.title}</h1>
+        <h1 className="listp-title">{props.title}</h1>
         <ul className="ul">
           {props.movieDetails.map((item) => {
             return (
-              <li key={item.imdbID} className="list-page__single-movie list">
+              <li key={item.imdbID} className="list-page-movie list">
                 
-                <div className="info">
-                  <h3 className="movie-item__title">{item.Title}</h3>
-                  <h4 className="movie-item__about">About movie</h4>
-                  <div className="list-page__details">
-                    <div className="list-page__details-title">
+                <div className="movie-info">
+                  <h3 className="movieTitle">{item.Title}</h3>
+                  <h4 className="movie-about">About movie</h4>
+                  <div className="details">
+                    <div className="details-title">
                       Date:
                     </div>
-                    <div className="list-page__details-value">{item.Year}</div>
+                    <div className="details-value">{item.Year}</div>
                   </div>
-                  <div className="list-page__details">
-                    <div className="list-page__details-title">Country:</div>
-                    <div className="list-page__details-value">
+                  <div className="details">
+                    <div className="details-title">Country:</div>
+                    <div className="details-value">
                       {item.Country}
                     </div>
                   </div>
-                  <div className="list-page__details">
-                    <div className="list-page__details-title">Genre:</div>
-                    <div className="list-page__details-value">{item.Genre}</div>
+                  <div className="details">
+                    <div className="details-title">Genre:</div>
+                    <div className="details-value">{item.Genre}</div>
                   </div>
-                  <div className="list-page__details-value">
-                    <ul className="movie-item__info-list">
+                  <div className="details-value">
+                    <ul className="info-list">
 
-                      <li id="movie-item__info-item">
-                        <button className="movie-item__add-button link-imdb">
+                      <li id="info-item">
+                        <button className="movieItemAddButton link-imdb">
                           <a
                             href={`https://www.imdb.com/title/${item.imdbID}/`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="list-page__link-imdb"
+                            className="listp-link-imdb"
                           >
                             See more on imdb
                           </a>
@@ -71,7 +65,7 @@ function ListPage(props) {
                 </div>
                 <img
                   src={item.Poster}
-                  className="single-movie__poster"
+                  className="movie-img"
                   alt={item.Title}
                 />
               </li>

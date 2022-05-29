@@ -1,9 +1,9 @@
-.header {
+.headerContainer {
     background: #14C38E;
     padding: 20px calc(50% - 500px) 10px;
 }
 
-.header__title {
+.headerTitle {
     font-family: 'Luckiest Guy', cursive;
     color: #FFEEDB;
     font-size: 45px;

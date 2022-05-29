@@ -1,10 +1,16 @@
-.favorites {
+.fav-container {
     box-sizing: border-box;
     border: 1px solid rgba(0, 8, 7);
     padding: 30px 20px;
   }
   
-  .favorites__name {
+  
+  
+  .fav_list {
+    margin-bottom: 24px;
+  }
+  
+  .fav_name {
     box-sizing: border-box;
     width: 100%;
     font-size: 16px;
@@ -12,16 +18,12 @@
     border: 1px solid rgba(0, 8, 7, 0.5);
     margin-bottom: 24px;
   }
-  
-  .favorites__list {
-    margin-bottom: 24px;
-  }
-  
-  .favorites__list li {
+
+  .fav_list li {
     margin-bottom: 10px;
   }
   
-  .favorites__save {
+  .fav_save {
     border: none;
     background-color: #14C38E;
     padding: 10px 15px;
@@ -31,12 +33,12 @@
     border-radius: px;
   }
   
-  .favorites__save:hover {
+  .fav_save:hover {
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s linear;
   }
-  .remove-favorite-movie {
+  .remove-fav-movie {
     border:none;
     margin-right: 10px;
     background-color: transparent;
@@ -45,19 +47,21 @@
     height: 20px;
     text-align: center;
     font-size: 17px;
-    transition: 0.075s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
-  .remove-favorite-movie:hover {
+  .remove-fav-movie:hover {
     transform: scale(1.125);
   }
   
-.block {
-  display: flex;
-  justify-content: space-between;
-}
-
   .movie-name {
     line-height: 1.5rem;
     width: 87%;
   }
+
+  .block {
+  display: flex;
+  justify-content: space-between;
+}
+
+  

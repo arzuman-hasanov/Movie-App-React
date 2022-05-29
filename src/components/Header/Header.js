@@ -3,8 +3,8 @@ import './Header.css';
 
 function Header() {
         return (
-            <header className="header">
-                <h1 className="header__title">
+            <header className="headerContainer">
+                <h1 className="headerTitle">
                     MustSee
                 </h1>
             </header>

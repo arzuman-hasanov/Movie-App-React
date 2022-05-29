@@ -21,23 +21,23 @@ function SearchBox(props) {
     const { searchLine } = state;
 
     return (
-      <div className="search-box">
+      <div className="searchBox">
         <form
-          className="search-box__form"
+          className="searchForm"
           onSubmit={searchBoxSubmitHandler}
         >
-          <label className="search-box__form-label">
+          <label className="searchFormLabel">
           Search Movie:
             <input
               value={searchLine}
               type="text"
-              className="search-box__form-input"
+              className="searchFormInput"
               onChange={searchLineChangeHandler}
             />
           </label>
           <button
             type="submit"
-            className="search-box__form-submit"
+            className="searchFormSubmit"
             disabled={!searchLine}
           >
             Search
